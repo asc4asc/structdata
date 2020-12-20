@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html lang="en">
+    	<head>
+    		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    	    <title>Javascript test</title>
+<style>
+@media only screen and (max-width: 600px) {
+   body { background-color: lightblue; }   
+   IfSmallNotNeed { display: none !important; } 
+   IfSmallDoBreak{ 
+       display: block !important; 
+       margin: 1em;
+    }
+} 
+</style>
+
+</head>
+<body>
+    
+<center>    
+test me please: <p id="demo"></p>
+    
+<script>
+    
+Structi = function() {
+    this.i=1;
+    this.s="";
+};
+
+Structi.prototype.doit = function() {
+  for (this.i=0; this.i<10; this.i++) { 
+    this.s = "Hello JavaS"+this.i+"<br>"+this.s; 
+    document.getElementById("demo").innerHTML = this.s;
+    console.log("Hello JavaScript!",this.i,"\n");
+  }
+};    
+  
+var tst = new Structi();
+tst.doit();
+    
+</script> 
+    
+</body>
+</html>
